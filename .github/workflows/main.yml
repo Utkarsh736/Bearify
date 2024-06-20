@@ -14,6 +14,13 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
+
+      - name: Debug git status
+        run: git status
+
+      - name: Debug remote URL
+        run: git remote -v
+
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
